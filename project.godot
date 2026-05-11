@@ -11,8 +11,23 @@ config_version=5
 [application]
 
 config/name="Human Become AI"
-config/features=PackedStringArray("4.6", "Mobile")
+run/main_scene="uid://dstisns28ows0"
+config/features=PackedStringArray("4.6", "C#", "Mobile")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+
+[dotnet]
+
+project/assembly_name="Human Become AI"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/YarnSpinner-Godot/plugin.cfg")
 
 [physics]
 

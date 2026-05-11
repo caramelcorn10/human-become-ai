@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dufbtaqjaqv0f"]
+
+[ext_resource type="Script" uid="uid://dnat8f4i5ca4i" path="res://scenes/ChatPrototype/ChatBar/ChatBar.cs" id="1_2htgf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2htgf"]
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="ChatBar" type="PanelContainer" unique_id=1654761417 node_paths=PackedStringArray("rtl")]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -92.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2htgf")
+script = ExtResource("1_2htgf")
+rtl = NodePath("MarginContainer/RichTextLabel")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=884912144]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer" unique_id=1037340867]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+fit_content = true
+scroll_active = false

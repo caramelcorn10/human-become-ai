@@ -1,0 +1,14 @@
+[remap]
+
+importer="yarnscript"
+type="Resource"
+uid="uid://0bbofqn70ey8"
+path="res://.godot/imported/test.yarn-d3f41f86b3544e9c4b284be284917789.tres"
+
+[deps]
+
+source_file="res://yarnspinner/scripts/test.yarn"
+dest_files=["res://.godot/imported/test.yarn-d3f41f86b3544e9c4b284be284917789.tres"]
+
+[params]
+

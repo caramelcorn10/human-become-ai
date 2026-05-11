@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dmo8k3boch2k2"]
+
+[ext_resource type="Script" uid="uid://dy3q6plxvqh4i" path="res://scenes/ChatPrototype/OptionsPresenter/OptionScene.cs" id="1_ou4bh"]
+
+[node name="Option" type="Control" unique_id=819574264 node_paths=PackedStringArray("button")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ou4bh")
+button = NodePath("Button")
+
+[node name="Button" type="Button" parent="." unique_id=724553317]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Test"

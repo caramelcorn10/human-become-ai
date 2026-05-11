@@ -1,0 +1,48 @@
+﻿title: Start
+tags:
+---
+Eric Peterson: How to stop wife from leaving me and taking the kids!
+You: therapyforfamilies.com
+You: Maybe you could try family therapy with your wife and children?
+Eric Peterson: therapy is for cocksuckers
+-> That kind of language is...
+    <<jump Oh>>
+-> I understand, but...
+    <<jump Godot>>
+-> KYS
+    <<jump Rope>>
+-> Bomboclat
+    <<jump Chef>>
+===
+
+title: Oh
+---
+You: That kind of language is inappropriate...
+-> Restart
+    <<jump Start>>
+===
+
+title: Godot
+---
+You: I understand, but maybe if you sucked more cocks your wife wouldn't want to leave you ;)
+-> Restart
+    <<jump Start>>
+===
+
+title: Rope
+---
+You: You should rope ya shit playboy
+-> Restart
+    <<jump Start>>
+===
+
+title: Chef
+---
+You: Bomboclat
+You: Ever thought about being a better human being?
+Eric Peterson: Gay
+You: Nah you gay
+Joe Swanson: Hey peter...
+-> Restart
+    <<jump Start>>
+===

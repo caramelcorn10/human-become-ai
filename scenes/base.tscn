@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dstisns28ows0"]
+
+[ext_resource type="PackedScene" uid="uid://78g1d1ptn6c4" path="res://scenes/chat_box.tscn" id="1_pvqg0"]
+
+[node name="Base" type="Control" unique_id=1240073856]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ChatBox" parent="." unique_id=606181042 instance=ExtResource("1_pvqg0")]
+clip_contents = true
+layout_mode = 1
+scale = Vector2(1, 1.022)
