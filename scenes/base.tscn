@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://dstisns28ows0"]
 
-[ext_resource type="PackedScene" uid="uid://78g1d1ptn6c4" path="res://scenes/chat_box.tscn" id="1_pvqg0"]
+[ext_resource type="Theme" uid="uid://djxlt4dvmvpen" path="res://themes/base_theme.tres" id="1_baglu"]
+[ext_resource type="PackedScene" uid="uid://bx1bwekm3fgnp" path="res://scenes/ChatPrototype/ChatBox/chat_box.tscn" id="1_pvqg0"]
+[ext_resource type="Script" uid="uid://co73djv7tu4sc" path="res://scenes/Base.cs" id="2_t45w4"]
+[ext_resource type="FontFile" uid="uid://b8srl01hr16vr" path="res://assets/fonts/Yarndings20-Regular.ttf" id="3_h5ip5"]
+[ext_resource type="FontFile" uid="uid://cqef1tkv6pnux" path="res://assets/fonts/StrichpunktSans-VariableFont_wdth,wght.ttf" id="4_40w10"]
 
 [node name="Base" type="Control" unique_id=1240073856]
 layout_mode = 3
@@ -9,8 +13,20 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_baglu")
+script = ExtResource("2_t45w4")
+wingdingFont = ExtResource("3_h5ip5")
+defaultFont = ExtResource("4_40w10")
 
 [node name="ChatBox" parent="." unique_id=606181042 instance=ExtResource("1_pvqg0")]
 clip_contents = true
-layout_mode = 1
-scale = Vector2(1, 1.022)
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 120.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(1, 1)

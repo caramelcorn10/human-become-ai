@@ -1,17 +1,19 @@
 [gd_scene format=3 uid="uid://c4bemnxsgl52h"]
 
-[ext_resource type="Script" uid="uid://es0807e3w4r2" path="res://scenes/ChatPrototype/ChatPresenter.cs" id="1_fc1eb"]
-[ext_resource type="PackedScene" uid="uid://c06oy1d2bhbbh" path="res://scenes/ChatPrototype/MessageBubble/message_bubble.tscn" id="2_jg2ca"]
+[ext_resource type="Theme" uid="uid://djxlt4dvmvpen" path="res://themes/base_theme.tres" id="1_f4hok"]
+[ext_resource type="Script" uid="uid://es0807e3w4r2" path="res://scenes/ChatPrototype/ChatBox/ChatPresenter/ChatPresenter.cs" id="1_fc1eb"]
+[ext_resource type="PackedScene" uid="uid://c06oy1d2bhbbh" path="res://scenes/ChatPrototype/ChatBox/MessageBubble/message_bubble.tscn" id="2_jg2ca"]
 
 [node name="ChatPresenter" type="ScrollContainer" unique_id=1489499170 node_paths=PackedStringArray("messageBox")]
 offset_right = 1280.0
 offset_bottom = 720.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_f4hok")
 follow_focus = true
 script = ExtResource("1_fc1eb")
-messageBox = NodePath("MessageBox")
 messageBubbleScene = ExtResource("2_jg2ca")
+messageBox = NodePath("MessageBox")
 
 [node name="MessageBox" type="VBoxContainer" parent="." unique_id=1418082594]
 unique_name_in_owner = true

@@ -5,7 +5,7 @@ using System.Threading;
 using YarnSpinnerGodot;
 
 [GlobalClass]
-public partial class OptionsPresenter : Control, DialoguePresenterBase
+public partial class OptionsPresenter : HBoxContainer, DialoguePresenterBase
 {
 	[Export] public PackedScene optionScene;
 	[Export] public HBoxContainer hboxContainer;

@@ -3,12 +3,12 @@
 importer="yarnproject"
 type="Resource"
 uid="uid://bu6frauenlsug"
-path="res://.godot/imported/test.yarnproject-2b9892f32f902f2c2399c30e31d466de.tres"
+path="res://.godot/imported/test.yarnproject-fa242138d61815082b33d24c6bbbdc8e.tres"
 
 [deps]
 
-source_file="res://yarnspinner/test.yarnproject"
-dest_files=["res://.godot/imported/test.yarnproject-2b9892f32f902f2c2399c30e31d466de.tres"]
+source_file="res://yarnspinner/test_project/test.yarnproject"
+dest_files=["res://.godot/imported/test.yarnproject-fa242138d61815082b33d24c6bbbdc8e.tres"]
 
 [params]
 

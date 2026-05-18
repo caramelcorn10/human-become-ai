@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://bx1bwekm3fgnp"]
+
+[ext_resource type="Script" uid="uid://budnld4qd513n" path="res://addons/YarnSpinner-Godot/Runtime/DialogueRunner.cs" id="1_akdcd"]
+[ext_resource type="Theme" uid="uid://djxlt4dvmvpen" path="res://themes/base_theme.tres" id="1_ek0w5"]
+[ext_resource type="Resource" uid="uid://bu6frauenlsug" path="res://yarnspinner/test_project/test.yarnproject" id="2_ek0w5"]
+[ext_resource type="PackedScene" uid="uid://c4bemnxsgl52h" path="res://scenes/ChatPrototype/ChatBox/ChatPresenter/chat_presenter.tscn" id="3_stmyb"]
+[ext_resource type="PackedScene" uid="uid://cqgq4pkfoogt6" path="res://scenes/ChatPrototype/ChatBox/OptionsPresenter/options_presenter.tscn" id="4_774ob"]
+[ext_resource type="PackedScene" uid="uid://dufbtaqjaqv0f" path="res://scenes/ChatPrototype/ChatBox/ChatBar/chat_bar.tscn" id="5_2dax8"]
+[ext_resource type="Script" uid="uid://b1o5xpu22evvx" path="res://addons/YarnSpinner-Godot/Runtime/InMemoryVariableStorage.cs" id="6_3cvyu"]
+[ext_resource type="Script" uid="uid://c5gxawri864uf" path="res://addons/YarnSpinner-Godot/Runtime/LineProviders/TextLineProvider.cs" id="7_dmrc0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_frqfy"]
+bg_color = Color(0.7294118, 0.7294118, 0.6313726, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+corner_detail = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w26hu"]
+
+[node name="ChatBox" type="BoxContainer" unique_id=606181042]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.79973876, 0.8180115)
+theme = ExtResource("1_ek0w5")
+theme_override_constants/separation = 0
+
+[node name="DialogueRunner" type="Control" parent="." unique_id=410802562 node_paths=PackedStringArray("variableStorage", "dialoguePresenters")]
+layout_mode = 2
+mouse_filter = 2
+script = ExtResource("1_akdcd")
+yarnProject = ExtResource("2_ek0w5")
+variableStorage = NodePath("../InMemoryVariableStorage")
+dialoguePresenters = [NodePath("../Panel/ChatPresenterContainer/ChatPresenter"), NodePath("../Panel/PanelContainer/MarginContainer/OptionsPresenter")]
+autoStart = true
+startNode = "Start"
+
+[node name="Panel" type="Panel" parent="." unique_id=418186560]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_ek0w5")
+theme_override_styles/panel = SubResource("StyleBoxFlat_frqfy")
+
+[node name="ChatPresenterContainer" type="MarginContainer" parent="Panel" unique_id=1861167884]
+clip_contents = true
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 540.0
+theme = ExtResource("1_ek0w5")
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="ChatPresenter" parent="Panel/ChatPresenterContainer" unique_id=555495692 node_paths=PackedStringArray("dialogueRunner", "chatBar") instance=ExtResource("3_stmyb")]
+layout_mode = 2
+draw_focus_border = true
+dialogueRunner = NodePath("../../../DialogueRunner")
+chatBar = NodePath("../../ChatBar")
+
+[node name="PanelContainer" type="PanelContainer" parent="Panel" unique_id=1355351676]
+layout_mode = 0
+offset_top = 540.0
+offset_right = 1280.0
+offset_bottom = 620.0
+theme = ExtResource("1_ek0w5")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_w26hu")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/PanelContainer" unique_id=1281972667]
+layout_mode = 2
+theme = ExtResource("1_ek0w5")
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 12
+
+[node name="OptionsPresenter" parent="Panel/PanelContainer/MarginContainer" unique_id=589073999 instance=ExtResource("4_774ob")]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="ChatBar" parent="Panel" unique_id=1624694896 instance=ExtResource("5_2dax8")]
+layout_mode = 1
+offset_left = 23.0
+offset_right = -21.0
+offset_bottom = -26.0
+secondsToSendMessage = 0.3
+
+[node name="VariableDebugText" type="RichTextLabel" parent="." unique_id=1854485167]
+visible = false
+layout_mode = 2
+theme = ExtResource("1_ek0w5")
+
+[node name="InMemoryVariableStorage" type="Node" parent="." unique_id=905872385]
+script = ExtResource("6_3cvyu")
+
+[node name="TextLineProvider" type="Node2D" parent="." unique_id=664078196]
+visible = false
+script = ExtResource("7_dmrc0")

@@ -10,7 +10,7 @@ public partial class ChatPresenter : ScrollContainer, DialoguePresenterBase
 	[Export] public PackedScene messageBubbleScene;
 	
 	[Export] public DialogueRunner dialogueRunner;
-	[Export] public int TypingSpeed = 20; //Use this here and in chatbar, maybe for chatbar we randomize a little so that npcs have different typing speeds
+	[Export] public int TypingSpeed = 20; // Use this here and in chatbar, maybe for chatbar we randomize a little so that npcs have different typing speeds
 	[Export] public ChatBar chatBar;
 
 	private string lastCharacterName;
@@ -46,14 +46,17 @@ public partial class ChatPresenter : ScrollContainer, DialoguePresenterBase
 			await ToSignal(GetTree().CreateTimer(timerLength), SceneTreeTimer.SignalName.Timeout);
 			
 		}
+		
 		bubble.SetText(line.TextWithoutCharacterName.Text);
+		
+		bubble.CallDeferred(Control.MethodName.GrabFocus);
 		
 		await ToSignal(GetTree().CreateTimer(1.5f), SceneTreeTimer.SignalName.Timeout);
 		lastCharacterName = currentCharacterName;
 		
 	}
 
-	private float CalculateTimerLength(int nbCharacters, int charactersPerSecond)
+	private static float CalculateTimerLength(int nbCharacters, int charactersPerSecond)
 	{
 		return (float)nbCharacters/(float)charactersPerSecond;
 	}

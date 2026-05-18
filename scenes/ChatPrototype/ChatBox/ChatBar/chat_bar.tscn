@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dufbtaqjaqv0f"]
 
-[ext_resource type="Script" uid="uid://dnat8f4i5ca4i" path="res://scenes/ChatPrototype/ChatBar/ChatBar.cs" id="1_2htgf"]
+[ext_resource type="Script" uid="uid://dnat8f4i5ca4i" path="res://scenes/ChatPrototype/ChatBox/ChatBar/ChatBar.cs" id="1_2htgf"]
+[ext_resource type="Theme" uid="uid://djxlt4dvmvpen" path="res://themes/base_theme.tres" id="1_esw2g"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2htgf"]
 corner_radius_top_left = 20
@@ -17,6 +18,7 @@ offset_top = -92.0
 offset_bottom = -20.0
 grow_horizontal = 2
 grow_vertical = 0
+theme = ExtResource("1_esw2g")
 theme_override_styles/panel = SubResource("StyleBoxFlat_2htgf")
 script = ExtResource("1_2htgf")
 rtl = NodePath("MarginContainer/RichTextLabel")

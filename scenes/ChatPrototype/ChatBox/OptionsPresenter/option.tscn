@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dmo8k3boch2k2"]
+
+[ext_resource type="Script" uid="uid://dy3q6plxvqh4i" path="res://scenes/ChatPrototype/ChatBox/OptionsPresenter/OptionScene.cs" id="1_ou4bh"]
+[ext_resource type="StyleBox" uid="uid://bkwjvvngbnkxx" path="res://scenes/ChatPrototype/ChatBox/OptionsPresenter/buttoncolor.tres" id="2_8gw18"]
+[ext_resource type="Theme" uid="uid://djxlt4dvmvpen" path="res://themes/base_theme.tres" id="3_r8q7u"]
+
+[node name="Option" type="PanelContainer" unique_id=1598515166 node_paths=PackedStringArray("button")]
+custom_minimum_size = Vector2(250, 0)
+size_flags_vertical = 0
+theme_override_styles/panel = ExtResource("2_8gw18")
+script = ExtResource("1_ou4bh")
+button = NodePath("Button")
+
+[node name="Button" type="Button" parent="." unique_id=1232731021]
+layout_mode = 2
+theme = ExtResource("3_r8q7u")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("2_8gw18")
+theme_override_styles/normal_mirrored = ExtResource("2_8gw18")
+theme_override_styles/pressed = ExtResource("2_8gw18")
+theme_override_styles/pressed_mirrored = ExtResource("2_8gw18")
+theme_override_styles/hover = ExtResource("2_8gw18")
+theme_override_styles/hover_mirrored = ExtResource("2_8gw18")
+theme_override_styles/hover_pressed = ExtResource("2_8gw18")
+theme_override_styles/hover_pressed_mirrored = ExtResource("2_8gw18")
+theme_override_styles/disabled = ExtResource("2_8gw18")
+theme_override_styles/disabled_mirrored = ExtResource("2_8gw18")
+theme_override_styles/focus = ExtResource("2_8gw18")
+text = "Test"
+flat = true
