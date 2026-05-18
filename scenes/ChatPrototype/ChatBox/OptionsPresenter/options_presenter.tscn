@@ -5,14 +5,12 @@
 [ext_resource type="PackedScene" uid="uid://dmo8k3boch2k2" path="res://scenes/ChatPrototype/ChatBox/OptionsPresenter/option.tscn" id="2_w6o6e"]
 
 [node name="OptionsPresenter" type="HBoxContainer" unique_id=589073999 node_paths=PackedStringArray("hboxContainer")]
-anchors_preset = 12
-anchor_top = 1.0
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -720.0
-offset_bottom = -620.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 theme = ExtResource("1_2mrib")
 theme_override_constants/separation = 8
 alignment = 1

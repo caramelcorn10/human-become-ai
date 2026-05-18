@@ -5,7 +5,8 @@
 [ext_resource type="Theme" uid="uid://djxlt4dvmvpen" path="res://themes/base_theme.tres" id="3_r8q7u"]
 
 [node name="Option" type="PanelContainer" unique_id=1598515166 node_paths=PackedStringArray("button")]
-custom_minimum_size = Vector2(250, 0)
+custom_minimum_size = Vector2(220, 0)
+size_flags_horizontal = 3
 size_flags_vertical = 0
 theme_override_styles/panel = ExtResource("2_8gw18")
 script = ExtResource("1_ou4bh")

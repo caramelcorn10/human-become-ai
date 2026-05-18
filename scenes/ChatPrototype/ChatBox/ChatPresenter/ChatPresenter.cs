@@ -32,6 +32,10 @@ public partial class ChatPresenter : ScrollContainer, DialoguePresenterBase
 		{
 			bubble.SetAsNonUserMessage();
 		}
+		else
+		{
+			bubble.SizeFlagsHorizontal = Control.SizeFlags.ExpandFill;
+		}
 
 		bubble.SetText("...");
 		
